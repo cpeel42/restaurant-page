@@ -1,0 +1,64 @@
+:root {
+    --primary-color: burlywood;
+    --secondary-color: orange;
+    --tertiary-color: saddlebrown;
+    --primary-font: cursive;
+}
+
+* {
+    margin: 0px;
+}
+
+body {
+    font-family: var(--primary-font);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary-color);
+}
+
+nav {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--primary-color);
+}
+
+nav button {
+    font-family: var(--primary-font);
+    font-size: large;
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    border-bottom: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: var(--primary-color);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+.container > * {
+    border: 10px solid var(--tertiary-color);
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+
+
+
