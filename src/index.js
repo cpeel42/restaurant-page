@@ -10,16 +10,18 @@ class Page {
     constructor(content, button) {
         this.button = button;
         this.content = content;
-        this.handleClick();
+        this.button.addEventListener('click', (event) => {
+            this.handleClick();
+        })
+        
     }
     handleClick() {
-        this.button.addEventListener('click', (event) => {
-            content.innerHTML = '';
-            content.appendChild(this.content);
-        })
+        content.innerHTML = '';
+        content.appendChild(this.content);
     }
 }
 
 const homeObj = new Page(home, document.querySelector('.home-button'));
 const menuObj = new Page(menu, document.querySelector('.menu-button'));
 const contactObj = new Page(contact, document.querySelector('.contact-button'));
+homeObj.handleClick();
